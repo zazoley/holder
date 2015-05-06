@@ -1674,8 +1674,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    //Remove CSS
-	    while (style.childNodes.length) {
-	        style.removeChild(style.childNodes[0]);
+	    if (style) {
+		    while (style.childNodes.length) {
+		        style.removeChild(style.childNodes[0]);
+		    }
 	    }
 
 	    setAttr(svg, {
